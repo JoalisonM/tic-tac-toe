@@ -22,8 +22,7 @@ while (not winner):
     player = (player + 1) % 2
   else:
     print("A posição informada já está ocupada")
-  
-  # winner = ttt.verifyWinner(board)
+  winner = ttt.verifyWinner(board)
 
-print()
-# print("Ganhador: ", winner)
+ttt.printBoard(board)
+print("Ganhador: ",winner)
