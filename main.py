@@ -41,4 +41,3 @@ while True:
   print("Ganhador: ", winner)
   conn.close()
   break
-  
