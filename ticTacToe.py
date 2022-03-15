@@ -46,15 +46,18 @@ class TicTacToe:
       if(board[0][i] == board[1][i] and board[1][i] == board[2][i] and board[0][i] != self.value ):
         return board[0][i]
 
-     if(board[0][0]!= self.value and board[0][0] == board[1][1] and board[1][1] == board[2][2]):
-       return board[0][0]
+    if(board[0][0]!= self.value and board[0][0] == board[1][1] and board[1][1] == board[2][2]):
+      return board[0][0]
 
-     if(board[0][2]!= self.value and board[0][2] == board[1][1] and board[1][1] == board[2][0]):
-       return board[0][2]
+    if(board[0][2]!= self.value and board[0][2] == board[1][1] and board[1][1] == board[2][0]):
+      return board[0][2]
 
-     for line in board:
-       for column in line:
-         if (column == self.value):
-           return False
+    for line in board:
+      for column in line:
+        if (column == self.value):
+          return False
 
-     return "Empate"
+    return "Empate"
+  
+  def randomPlayer(self,token):
+    pass
