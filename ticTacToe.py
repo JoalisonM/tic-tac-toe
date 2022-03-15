@@ -14,7 +14,7 @@ class TicTacToe:
 
   def printBoard(self, board):
     for line in board:
-      print(line)
+      return line
 
   def getInputValid(self, menssage):
     try:
@@ -39,7 +39,7 @@ class TicTacToe:
     board[line][column] = self.token[player]
 
   def verifyWinner(self, board):
-     for i in range(3):
+    for i in range(3):
       if(board[i][0] == board[i][1] and board[i][1] == board[i][2] and board[i][0] != self.value ):
         return board[i][0]
 
