@@ -13,8 +13,7 @@ class TicTacToe:
     return board
 
   def printBoard(self, board):
-    for line in board:
-      return line
+    return board
 
   def getInputValid(self, menssage):
     try:
@@ -59,5 +58,5 @@ class TicTacToe:
 
     return "Empate"
   
-  def randomPlayer(self,token):
+  def defineToken(self,token):
     pass
