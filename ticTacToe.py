@@ -1,7 +1,7 @@
 class TicTacToe:
   def __init__(self):
     self.value = " "
-    self.token = ["X", "O"]
+    self.token = ["", "X", "O"]
 
   def createBoard(self):
     board = [
@@ -13,26 +13,31 @@ class TicTacToe:
     return board
 
   def printBoard(self, board):
-    return board
+    for row in board:
+      print(row)
 
-  def getInputValid(self, menssage):
-    try:
-      number = int(input(menssage))
+  def getInputValid(self, board):
+    row = None
+    column = None
+  
+    while True:
+      try:
+        row = int(input("Digite a linha: "))
+        column = int(input("Digite a coluna: "))
 
-      if (number >= 1 and number <= 3):
-        return number - 1
-      else:
-        print("Número precisa estar entre 1 e 3")
-        return self.getInputValid(menssage)
-    except:
-      print("Número não válido")
-      return self.getInputValid(menssage)
+        if (row  < 1 or row > 3 or column < 1 or column > 3):
+          print("Número precisa estar entre 1 e 3\n")
+          continue
 
-  def verifyMovement(self, board, line, column):
-    if(board[line][column] == self.value):
-      return True
-    else:
-      return False
+        if (board[row-1][column-1] != self.value):
+          print("Posição já preenchida\n")
+          continue
+        else:
+          return row, column
+      
+      except:
+        print("Digite um número inteiro")
+        continue
 
   def makeMovement(self, board, line, column, player):
     board[line][column] = self.token[player]
@@ -57,6 +62,3 @@ class TicTacToe:
           return False
 
     return "Empate"
-  
-  def defineToken(self,token):
-    pass
