@@ -1,5 +1,5 @@
 import json
-import socket
+from socket import *
 from ticTacToe import TicTacToe
 
 player = 0
@@ -23,7 +23,6 @@ def responding():
 
     client.send(json.dumps(pack).encode())
     data = json.loads(client.recv(1024).decode())
-    print("data: ",data)
 
 def main():
   global player
@@ -42,7 +41,7 @@ def main():
     print("Minimo de caracteres: 1")
     name = input("Digite seu nome de jogador: ")
   
-  client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+  client = socket(AF_INET, SOCK_STREAM)
   client.connect((HOST, PORT))
   client.send(name.encode())
 
@@ -81,6 +80,7 @@ def main():
       response = json.loads(response)
 
       ttt.makeMovement(board, response['row']-1, response['column']-1, (player % 2) + 1)
+      print("Jogada do player %s" % ((player % 2) + 1))
       ttt.printBoard(board)
       player_waiting = False
 
