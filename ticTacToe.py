@@ -12,9 +12,11 @@ class TicTacToe:
 
     return board
 
-  def printBoard(self, board):
-    for row in board:
-      print(row)
+   def printBoard(self, board):
+    for row in board(3):
+      print("|".join(board[row]))
+      if(row<2):
+        print("------")
 
   def getInputValid(self, board):
     row = None
