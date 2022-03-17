@@ -1,5 +1,7 @@
 # **Jogo da velha :hash:** 
 
+##### Desenvolvido por: Joalison Matheus, Lília Maria e Samira Kaline
+
 ## Dependências :computer:
 * Sockets com TCP;
 * Linguagem python.
