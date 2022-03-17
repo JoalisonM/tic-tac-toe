@@ -28,5 +28,16 @@
 * O server manda um pacote um jogador com as informações da jogada de outro
 	jogador;
 
+### RESULT (server -> player) :pushpin:
+* O server manda um pacote com qual foi o jogador que ganhou a partida;
+
+## Jogar :arrow_forward:
+* Apos se conectar, o jogador se identica através do nome;
+* Fica aguardando até o outro jogador entrar;
+* Se tiver dois jogadores, o server vai lhes informar com qual elemento eles iram jogar;
+* Ambos os jogadores fazem suas jogadas, indicando a posição no tabuleiro;
+* Quando houver um vencedor ou der empate, o jogo acaba.
+
+
 
 
