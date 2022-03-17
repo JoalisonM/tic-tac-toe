@@ -14,27 +14,30 @@
 
 ## Conexões :electric_plug:
 
-### START_GAME (player -> server) :pushpin:
+#### START_GAME (player -> server) :pushpin:
 * O player manda um pacote com o nome dele para reconhecimento;
      
 
-### RECOGNIZE_PLAYER (server -> player) :pushpin:
+#### RECOGNIZE_PLAYER (server -> player) :pushpin:
 * O server manda um pacote que diz ao jogador qual player ele é (1 ou 2);
 
-### MAKE_PLAY (player -> server) :pushpin:
+#### MAKE_PLAY (player -> server) :pushpin:
 * O player manda um pacote com as informações da jogada dele;
 
-### REDIRECT (server -> player) :pushpin:
+#### REDIRECT (server -> player) :pushpin:
 * O server manda um pacote um jogador com as informações da jogada de outro
 	jogador;
 
-### RESULT (server -> player) :pushpin:
+#### RESULT (server -> player) :pushpin:
 * O server manda um pacote com qual foi o jogador que ganhou a partida;
 
 ## Jogar :arrow_forward:
-* Apos se conectar, o jogador se identica através do nome;
+* Primeiro é necessário executar o arquivo `python3 main.py` no terminal para ligar o servidor;
+* Os jogadores se conectam no servidor ao executar o arquivo `python3 client.py` no terminal;
+* Apos se conectar, o jogador se identifica através do nome;
 * Fica aguardando até o outro jogador entrar;
-* Se tiver dois jogadores, o server vai lhes informar com qual elemento eles iram jogar;
+* O player 1 sempre vai ser o `X` e o player 2 sempre vai ser o `O`;
+* Player 1 começa jogando e o player 2 espera a jogada do 1;
 * Ambos os jogadores fazem suas jogadas, indicando a posição no tabuleiro;
 * Quando houver um vencedor ou der empate, o jogo acaba.
 
