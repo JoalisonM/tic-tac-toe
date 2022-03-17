@@ -28,9 +28,6 @@
 * O server manda um pacote um jogador com as informações da jogada de outro
 	jogador;
 
-#### RESULT (server -> player) :pushpin:
-* O server manda um pacote com qual foi o jogador que ganhou a partida;
-
 ## Jogar :arrow_forward:
 * Primeiro é necessário executar o arquivo `python3 main.py` no terminal para ligar o servidor;
 * Os jogadores se conectam no servidor ao executar o arquivo `python3 client.py` no terminal;
