@@ -14,12 +14,12 @@ class TicTacToe:
   
   
   def printBoard(self, board):
-      print("")
-      for i in range(3):
-         print("")
-         print(" | ".join(board[i]))
-         if(i<2):
-           print("---------")
+    print("")
+    for i in range(3):
+      print(" | ".join(board[i]))
+      if(i<2):
+        print("---------")
+    print("")
 
 
   def getInputValid(self, board):

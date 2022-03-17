@@ -5,7 +5,7 @@ players = 0
 connections = []
 
 HOST = 'localhost'
-PORT = 50000
+PORT = 50001
 
 def receive(connection, client):
   global connections
