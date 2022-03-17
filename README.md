@@ -29,7 +29,7 @@
 	jogador;
 
 ## Jogar :arrow_forward:
-* Primeiro é necessário executar o arquivo `python3 main.py` no terminal para ligar o servidor;
+* Primeiro é necessário executar o arquivo `python3 server.py` no terminal para ligar o servidor;
 * Os jogadores se conectam no servidor ao executar o arquivo `python3 client.py` no terminal;
 * Apos se conectar, o jogador se identifica através do nome;
 * Fica aguardando até o outro jogador entrar;
