@@ -1,17 +1,11 @@
 from socket import *
 import threading, json
 
-from ticTacToe import TicTacToe
-
-ttt = TicTacToe()
-board = ttt.createBoard()
-winner = ttt.verifyWinner(board)
-
 players = 0
 connections = []
 
 HOST = 'localhost'
-PORT = 65111
+PORT = 50000
 
 def receive(connection, client):
   global connections
@@ -63,7 +57,6 @@ for i in range(len(connections)):
 
   connection.send(json.dumps(sendPlayer).encode())
   connection.recv(1024).decode()
-  print("CHEGUEI AQUI")
 
 conn1, client1 = connections[0]
 conn2, client2 = connections[1]
