@@ -33,7 +33,7 @@ def main():
 
 
   HOST = 'localhost'
-  PORT = 65111
+  PORT = 50000
 
   name = ""
   while(len(name) < 1 or len(name) > 10):
@@ -45,11 +45,15 @@ def main():
   client.connect((HOST, PORT))
   client.send(name.encode())
 
+  print(" ")
   print("CONECTADO...")
+  print(" ")
   print("AGUARDANDO OUTROS JOGADORES...")
+  print(" ")
 
   message = client.recv(1024).decode()
-  print(message)
+  print("Você é o(a)", message)
+  print("")
   message = json.loads(message)
   client.send("{}".encode())
 

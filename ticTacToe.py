@@ -11,12 +11,16 @@ class TicTacToe:
     ]
 
     return board
+  
+  
+  def printBoard(self, board):
+      print("")
+      for i in range(3):
+         print("")
+         print(" | ".join(board[i]))
+         if(i<2):
+           print("---------")
 
-   def printBoard(self, board):
-    for row in board(3):
-      print("|".join(board[row]))
-      if(row<2):
-        print("------")
 
   def getInputValid(self, board):
     row = None
@@ -40,6 +44,7 @@ class TicTacToe:
       except:
         print("Digite um número inteiro")
         continue
+  
 
   def makeMovement(self, board, line, column, player):
     board[line][column] = self.token[player]
